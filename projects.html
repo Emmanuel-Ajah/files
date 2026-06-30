@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Projects by Ajah Onyekachi Emmanuel — mobile apps, web platforms, and UI/UX designs."
+    />
+    <title>Projects — Ajah Emmanuel</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="container nav-inner">
+        <a class="nav-logo" href="index.html">Ajah<span>.</span>dev</a>
+
+        <ul class="nav-links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="planner.html">Planner</a></li>
+          <li>
+            <a href="contact.html" class="btn btn-primary nav-cta">Contact →</a>
+          </li>
+        </ul>
+        <button
+          class="hamburger"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <header class="page-hero">
+      <div class="container">
+        <span class="section-label">portfolio</span>
+        <h1 class="page-hero-title">
+          Work I'm <span class="accent">proud of</span>
+        </h1>
+        <p class="page-hero-sub">
+          From mobile apps to web platforms — real products built for real
+          people across Africa and beyond.
+        </p>
+      </div>
+    </header>
+
+    <!-- PROJECT FILTERS -->
+    <section class="section" style="padding-bottom: 0" aria-label="Projects">
+      <div class="container">
+        <div
+          style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 36px"
+          role="group"
+          aria-label="Filter projects"
+        >
+          <button class="filter-btn proj-filter-btn active" data-cat="all">
+            All Projects
+          </button>
+          <button class="filter-btn proj-filter-btn" data-cat="mobile">
+            📱 Mobile
+          </button>
+          <button class="filter-btn proj-filter-btn" data-cat="web">
+            🌐 Web
+          </button>
+          <button class="filter-btn proj-filter-btn" data-cat="design">
+            🎨 Design
+          </button>
+        </div>
+
+        <!-- PROJECTS GRID -->
+        <div class="projects-grid" id="projects-grid">
+          <!-- Project 1: AppNaija Studios Platform -->
+          <article
+            class="project-card fade-up"
+            data-cat="web"
+            aria-label="AppNaija Studios Platform"
+          >
+            <div
+              class="project-thumb"
+              style="background: linear-gradient(135deg, #1a0533, #2d1060)"
+            >
+              <span style="position: relative; z-index: 1">🏢</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="tag">Web App</span>
+                <span class="tag">Business</span>
+              </div>
+              <h2 class="project-title">AppNaija Studios Platform</h2>
+              <p class="project-desc">
+                The official digital home for AppNaija Studios — a full-featured
+                agency website showcasing services, portfolio, and client
+                enquiry system. Built with clean HTML, CSS, and JavaScript.
+                Features a responsive layout, animated sections, and a fully
+                validated contact form.
+              </p>
+              <div class="project-links">
+                <a href="#" class="project-link" target="_blank" rel="noopener">
+                  🔗 View Live
+                </a>
+                <a href="#" class="project-link" target="_blank" rel="noopener">
+                  &lt;/&gt; Source
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Tutgo Learn App -->
+          <article
+            class="project-card fade-up"
+            data-cat="mobile"
+            aria-label="Tutgo Learn Mobile App"
+          >
+            <div
+              class="project-thumb"
+              style="
+                background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+              "
+            >
+              <span style="position: relative; z-index: 1">🎓</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="tag">Mobile App</span>
+                <span class="tag">EdTech</span>
+              </div>
+              <h2 class="project-title">Tutgo Learn App</h2>
+              <p class="project-desc">
+                A mobile-first educational platform built with React Native that
+                connects aspiring developers to project-based programming
+                courses. Features video lessons, code challenges, progress
+                tracking, and a community forum. Designed with accessibility and
+                offline support in mind for users across Nigeria.
+              </p>
+              <div class="project-links">
+                <a href="#" class="project-link" target="_blank" rel="noopener">
+                  🔗 View Demo
+                </a>
+                <a href="#" class="project-link" target="_blank" rel="noopener">
+                  &lt;/&gt; Source
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: NaijaMarket UI Redesign -->
+          <article
+            class="project-card fade-up"
+            data-cat="design"
+            aria-label="NaijaMarket UI Redesign"
+          >
+            <div
+              class="project-thumb"
+              style="
+                background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+              "
+            >
+              <span style="position: relative; z-index: 1">🛒</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="tag">UI/UX Design</span>
+                <span class="tag">E-commerce</span>
+              </div>
+              <h2 class="project-title">NaijaMarket UI Redesign</h2>
+              <p class="project-desc">
+                A comprehensive UI/UX overhaul of a local Nigerian e-commerce
+                platform. The redesign focused on reducing checkout friction,
+                improving product discoverability, and adapting the interface
+                for low-bandwidth environments. Delivered wireframes,
+                high-fidelity mockups, and a design system in Figma.
+              </p>
+              <div class="project-links">
+                <a href="#" class="project-link" target="_blank" rel="noopener">
+                  🎨 Figma File
+                </a>
+                <a href="#" class="project-link" target="_blank" rel="noopener">
+                  📄 Case Study
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: DevTrack Task Manager -->
+          <article
+            class="project-card fade-up"
+            data-cat="web"
+            aria-label="DevTrack Task Manager"
+          >
+            <div
+              class="project-thumb"
+              style="background: linear-gradient(135deg, #0a0f1e, #1a2744)"
+            >
+              <span style="position: relative; z-index: 1">✅</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="tag">Web App</span>
+                <span class="tag">Productivity</span>
+              </div>
+              <h2 class="project-title">DevTrack Task Manager</h2>
+              <p class="project-desc">
+                A lightweight, browser-based task management tool built entirely
+                with vanilla HTML, CSS, and JavaScript. Features task
+                prioritization, categories, due dates, and persistent
+                localStorage. The same JavaScript logic powers this portfolio's
+                Academic Planner. No frameworks — just clean, fast code.
+              </p>
+              <div class="project-links">
+                <a href="planner.html" class="project-link"> 🚀 Try It Live </a>
+                <a href="#" class="project-link" target="_blank" rel="noopener">
+                  &lt;/&gt; Source
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5: AfriConnect Social App -->
+          <article
+            class="project-card fade-up"
+            data-cat="mobile"
+            aria-label="AfriConnect Social App"
+          >
+            <div
+              class="project-thumb"
+              style="background: linear-gradient(135deg, #1f4037, #99f2c8)"
+            >
+              <span style="position: relative; z-index: 1">🌍</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="tag">Mobile App</span>
+                <span class="tag">Social</span>
+              </div>
+              <h2 class="project-title">AfriConnect Social App</h2>
+              <p class="project-desc">
+                A community networking mobile app built with Flutter, designed
+                specifically for African tech professionals. Features include
+                profile creation, skill tagging, project collaboration requests,
+                and direct messaging. Uses Firebase for real-time data and
+                authentication. Currently in active beta testing.
+              </p>
+              <div class="project-links">
+                <a href="#" class="project-link" target="_blank" rel="noopener">
+                  🔗 Beta Access
+                </a>
+                <a href="#" class="project-link" target="_blank" rel="noopener">
+                  &lt;/&gt; Source
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 6: Portfolio Website -->
+          <article
+            class="project-card fade-up"
+            data-cat="web"
+            aria-label="This Portfolio Website"
+          >
+            <div
+              class="project-thumb"
+              style="background: linear-gradient(135deg, #0a0f1e, #5b4dff33)"
+            >
+              <span style="position: relative; z-index: 1">💼</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="tag">Web</span>
+                <span class="tag">Portfolio</span>
+              </div>
+              <h2 class="project-title">This Portfolio Website</h2>
+              <p class="project-desc">
+                You're looking at it! A fully responsive, multi-page academic
+                portfolio built from scratch using semantic HTML5, an external
+                CSS stylesheet with CSS Grid and Flexbox, and vanilla
+                JavaScript. Features include a typewriter hero, animated task
+                planner, form validation, scroll animations, and full mobile
+                responsiveness.
+              </p>
+              <div class="project-links">
+                <a href="index.html" class="project-link"> 🔗 You're Here </a>
+                <a href="#" class="project-link" target="_blank" rel="noopener">
+                  &lt;/&gt; GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <!-- /projects-grid -->
+      </div>
+    </section>
+
+    <!-- TECH STACK TABLE -->
+    <section
+      class="section fade-up"
+      style="background: var(--navy-mid); border-top: 1px solid var(--border)"
+      aria-label="Technology stack"
+    >
+      <div class="container">
+        <span class="section-label">stack</span>
+        <h2 class="section-title">
+          Technologies I <span class="accent">work with</span>
+        </h2>
+        <div class="tech-table-wrap">
+          <table class="tech-table" aria-label="Technology stack details">
+            <thead>
+              <tr>
+                <th>Technology</th>
+                <th>Category</th>
+                <th>Use Case</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>React Native</td>
+                <td>Mobile</td>
+                <td>Cross-platform iOS &amp; Android apps</td>
+                <td><span class="status-badge status-live">● Active</span></td>
+              </tr>
+              <tr>
+                <td>Flutter / Dart</td>
+                <td>Mobile</td>
+                <td>High-performance native apps</td>
+                <td><span class="status-badge status-live">● Active</span></td>
+              </tr>
+              <tr>
+                <td>HTML5 / CSS3</td>
+                <td>Web Frontend</td>
+                <td>Semantic markup &amp; responsive styling</td>
+                <td><span class="status-badge status-live">● Active</span></td>
+              </tr>
+              <tr>
+                <td>JavaScript ES6+</td>
+                <td>Web Frontend</td>
+                <td>Interactivity, DOM manipulation</td>
+                <td><span class="status-badge status-live">● Active</span></td>
+              </tr>
+              <tr>
+                <td>Figma</td>
+                <td>Design</td>
+                <td>UI design, wireframing, prototypes</td>
+                <td><span class="status-badge status-live">● Active</span></td>
+              </tr>
+              <tr>
+                <td>Firebase</td>
+                <td>Backend / BaaS</td>
+                <td>Auth, Firestore, hosting</td>
+                <td><span class="status-badge status-live">● Active</span></td>
+              </tr>
+              <tr>
+                <td>Node.js</td>
+                <td>Backend</td>
+                <td>REST API development</td>
+                <td><span class="status-badge status-wip">◐ Learning</span></td>
+              </tr>
+              <tr>
+                <td>Python</td>
+                <td>Scripting / AI</td>
+                <td>Automation &amp; ML experiments</td>
+                <td>
+                  <span class="status-badge status-concept">○ Exploring</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO DEMO (Multimedia requirement) -->
+    <section class="section fade-up" aria-label="Project demo video">
+      <div class="container">
+        <span class="section-label">demo</span>
+        <h2 class="section-title" style="margin-bottom: 24px">
+          See it in <span class="accent">action</span>
+        </h2>
+        <div class="media-card" style="max-width: 720px">
+          <p
+            style="
+              color: var(--slate-lt);
+              font-size: 0.9rem;
+              margin-bottom: 16px;
+            "
+          >
+            🎬 Project walkthrough — AppNaija Studios Platform demo:
+          </p>
+          <video
+            controls
+            preload="metadata"
+            poster=""
+            style="width: 100%; border-radius: 8px; background: #000"
+          >
+            <source src="media/demo.mp4" type="video/mp4" />
+            <p
+              style="
+                color: var(--slate);
+                font-size: 0.85rem;
+                padding: 20px;
+                text-align: center;
+              "
+            >
+              Video demo not available —
+              <a href="media/demo.mp4" style="color: var(--indigo-lt)"
+                >download here</a
+              >.
+            </p>
+          </video>
+          <p
+            style="
+              color: var(--slate);
+              font-size: 0.78rem;
+              margin-top: 12px;
+              font-style: italic;
+            "
+          >
+            Note: Video is a placeholder — replace with your actual project
+            demo.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <div class="footer-inner">
+          <div>
+            <div class="footer-logo">ajah<span>.</span>dev</div>
+            <div class="footer-tagline">
+              Software Developer · App Designer · Entrepreneur
+            </div>
+          </div>
+          <div>
+            <div class="footer-links-title">Navigate</div>
+            <nav class="footer-nav">
+              <a href="index.html">Home</a>
+              <a href="about.html">About</a>
+              <a href="projects.html">Projects</a>
+              <a href="planner.html">Planner</a>
+              <a href="contact.html">Contact</a>
+            </nav>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2025 Ajah Onyekachi Emmanuel. All rights reserved.</span>
+          <div class="footer-socials">
+            <a class="footer-social" href="#" aria-label="GitHub">GH</a>
+            <a class="footer-social" href="#" aria-label="LinkedIn">LI</a>
+            <a class="footer-social" href="#" aria-label="Twitter">TW</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

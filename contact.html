@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contact Ajah Onyekachi Emmanuel — for project inquiries, collaboration, or mentorship."
+    />
+    <title>Contact — Ajah Emmanuel</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="container nav-inner">
+        <a class="nav-logo" href="index.html">Ajah<span>.</span>dev</a>
+
+        <ul class="nav-links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="planner.html">Planner</a></li>
+          <li>
+            <a href="contact.html" class="btn btn-primary nav-cta active"
+              >Contact →</a
+            >
+          </li>
+        </ul>
+        <button
+          class="hamburger"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <header class="page-hero">
+      <div class="container">
+        <span class="section-label">get in touch</span>
+        <h1 class="page-hero-title">
+          Let's build something <span class="accent">together</span>
+        </h1>
+        <p class="page-hero-sub">
+          Have a project, partnership proposal, or just want to say hello? Fill
+          in the form and I'll get back to you within 24 hours.
+        </p>
+      </div>
+    </header>
+
+    <!-- CONTACT SECTION -->
+    <section class="section" aria-label="Contact form">
+      <div class="container">
+        <div class="contact-grid">
+          <!-- INFO CARD -->
+          <aside aria-label="Contact information">
+            <div class="contact-info-card">
+              <div class="contact-info-title">Contact Info</div>
+              <p class="contact-info-sub">
+                I'm currently open to freelance projects, startup
+                collaborations, and speaking opportunities about tech
+                entrepreneurship in Africa.
+              </p>
+
+              <div class="contact-detail">
+                <div class="contact-icon" aria-hidden="true">📧</div>
+                <div>
+                  <div class="contact-detail-label">Email</div>
+                  <div class="contact-detail-value">emmanuel@appnaija.dev</div>
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <div class="contact-icon" aria-hidden="true">📞</div>
+                <div>
+                  <div class="contact-detail-label">Phone</div>
+                  <div class="contact-detail-value">+234 800 000 0000</div>
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <div class="contact-icon" aria-hidden="true">📍</div>
+                <div>
+                  <div class="contact-detail-label">Location</div>
+                  <div class="contact-detail-value">
+                    Nigeria 🇳🇬 · Remote Worldwide
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <div class="contact-icon" aria-hidden="true">⏱️</div>
+                <div>
+                  <div class="contact-detail-label">Response Time</div>
+                  <div class="contact-detail-value">Within 24 hours</div>
+                </div>
+              </div>
+
+              <!-- Social links -->
+              <div style="margin-top: 24px">
+                <div
+                  style="
+                    font-size: 0.78rem;
+                    color: var(--slate);
+                    margin-bottom: 12px;
+                    font-family: var(--ff-mono);
+                    letter-spacing: 0.1em;
+                    text-transform: uppercase;
+                  "
+                >
+                  Find me on
+                </div>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap">
+                  <a
+                    href="#"
+                    class="btn btn-outline"
+                    style="padding: 8px 16px; font-size: 0.82rem"
+                    aria-label="GitHub profile"
+                    >GH GitHub</a
+                  >
+                  <a
+                    href="#"
+                    class="btn btn-outline"
+                    style="padding: 8px 16px; font-size: 0.82rem"
+                    aria-label="LinkedIn profile"
+                    >LI LinkedIn</a
+                  >
+                  <a
+                    href="#"
+                    class="btn btn-outline"
+                    style="padding: 8px 16px; font-size: 0.82rem"
+                    aria-label="Twitter profile"
+                    >TW Twitter</a
+                  >
+                </div>
+              </div>
+            </div>
+          </aside>
+
+          <!-- FORM CARD -->
+          <div>
+            <div class="contact-form-card">
+              <div class="contact-form-title">Send a Message</div>
+              <p class="contact-form-sub">
+                All fields are required. I read every message personally.
+              </p>
+
+              <!-- The contact form -->
+              <form id="contact-form" novalidate aria-label="Contact form">
+                <div class="form-row">
+                  <!-- Name -->
+                  <div class="form-group">
+                    <label class="form-label" for="cf-name">Full Name *</label>
+                    <input
+                      type="text"
+                      id="cf-name"
+                      class="form-input"
+                      placeholder="e.g., Amaka Okafor"
+                      required
+                      autocomplete="name"
+                      aria-required="true"
+                      aria-describedby="err-name"
+                    />
+                    <span id="err-name" class="field-error" role="alert"></span>
+                  </div>
+
+                  <!-- Email -->
+                  <div class="form-group">
+                    <label class="form-label" for="cf-email"
+                      >Email Address *</label
+                    >
+                    <input
+                      type="email"
+                      id="cf-email"
+                      class="form-input"
+                      placeholder="you@example.com"
+                      required
+                      autocomplete="email"
+                      aria-required="true"
+                      aria-describedby="err-email"
+                    />
+                    <span
+                      id="err-email"
+                      class="field-error"
+                      role="alert"
+                    ></span>
+                  </div>
+                </div>
+
+                <!-- Phone -->
+                <div class="form-group">
+                  <label class="form-label" for="cf-phone"
+                    >Phone Number *</label
+                  >
+                  <input
+                    type="tel"
+                    id="cf-phone"
+                    class="form-input"
+                    placeholder="e.g., 08012345678"
+                    required
+                    autocomplete="tel"
+                    aria-required="true"
+                    aria-describedby="err-phone"
+                  />
+                  <span id="err-phone" class="field-error" role="alert"></span>
+                </div>
+
+                <!-- Subject -->
+                <div class="form-group">
+                  <label class="form-label" for="cf-subject">Subject</label>
+                  <select id="cf-subject" class="form-select">
+                    <option value="Project Inquiry">💻 Project Inquiry</option>
+                    <option value="Collaboration">🤝 Collaboration</option>
+                    <option value="Tutgo / Education">
+                      🎓 Tutgo / Education
+                    </option>
+                    <option value="Mentorship">🧠 Mentorship</option>
+                    <option value="General">💬 General Message</option>
+                  </select>
+                </div>
+
+                <!-- Message -->
+                <div class="form-group">
+                  <label class="form-label" for="cf-message">Message *</label>
+                  <textarea
+                    id="cf-message"
+                    class="form-textarea"
+                    rows="5"
+                    placeholder="Tell me about your project, idea, or what you'd like to discuss..."
+                    required
+                    aria-required="true"
+                    aria-describedby="err-message"
+                  ></textarea>
+                  <span
+                    id="err-message"
+                    class="field-error"
+                    role="alert"
+                  ></span>
+                </div>
+
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                  style="width: 100%; justify-content: center; padding: 14px"
+                >
+                  Send Message →
+                </button>
+              </form>
+
+              <!-- Success message -->
+              <div
+                id="form-success"
+                class="form-success"
+                role="alert"
+                aria-live="polite"
+              >
+                <div class="success-icon">🎉</div>
+                <div class="success-title">Message Sent!</div>
+                <p class="success-sub" style="margin-bottom: 20px">
+                  Thanks for reaching out! I'll get back to you within 24 hours.
+                  Check your inbox for a confirmation.
+                </p>
+                <button id="form-reset" class="btn btn-outline">
+                  Send Another Message
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /contact-grid -->
+      </div>
+    </section>
+
+    <!-- FAQ / QUICK INFO -->
+    <section
+      class="section fade-up"
+      style="background: var(--navy-mid); border-top: 1px solid var(--border)"
+      aria-label="FAQ"
+    >
+      <div class="container">
+        <span class="section-label">quick answers</span>
+        <h2 class="section-title" style="margin-bottom: 32px">
+          Common <span class="accent">Questions</span>
+        </h2>
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+          "
+        >
+          <div class="card">
+            <h3
+              style="
+                font-family: var(--ff-display);
+                font-weight: 700;
+                margin-bottom: 8px;
+                font-size: 1rem;
+              "
+            >
+              Do you take freelance projects?
+            </h3>
+            <p
+              style="
+                font-size: 0.88rem;
+                color: var(--slate-lt);
+                line-height: 1.65;
+              "
+            >
+              Yes! I'm open to mobile app development, web projects, and UI/UX
+              design contracts. Fill the form above to discuss your needs.
+            </p>
+          </div>
+          <div class="card">
+            <h3
+              style="
+                font-family: var(--ff-display);
+                font-weight: 700;
+                margin-bottom: 8px;
+                font-size: 1rem;
+              "
+            >
+              Can I learn with Tutgo Technologies?
+            </h3>
+            <p
+              style="
+                font-size: 0.88rem;
+                color: var(--slate-lt);
+                line-height: 1.65;
+              "
+            >
+              Absolutely. Tutgo is designed for beginners to intermediate
+              developers. Reach out and I'll share how to get enrolled.
+            </p>
+          </div>
+          <div class="card">
+            <h3
+              style="
+                font-family: var(--ff-display);
+                font-weight: 700;
+                margin-bottom: 8px;
+                font-size: 1rem;
+              "
+            >
+              Do you work with startups?
+            </h3>
+            <p
+              style="
+                font-size: 0.88rem;
+                color: var(--slate-lt);
+                line-height: 1.65;
+              "
+            >
+              Yes — I've worked with early-stage startups and SMEs across
+              Nigeria. I understand how to deliver MVP-quality products quickly.
+            </p>
+          </div>
+          <div class="card">
+            <h3
+              style="
+                font-family: var(--ff-display);
+                font-weight: 700;
+                margin-bottom: 8px;
+                font-size: 1rem;
+              "
+            >
+              What are your working hours?
+            </h3>
+            <p
+              style="
+                font-size: 0.88rem;
+                color: var(--slate-lt);
+                line-height: 1.65;
+              "
+            >
+              I'm based in Nigeria (WAT, UTC+1) and typically available
+              Monday–Saturday, 9am–6pm. I respond to all messages within 24
+              hours.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <div class="footer-inner">
+          <div>
+            <div class="footer-logo">ajah<span>.</span>dev</div>
+            <div class="footer-tagline">
+              Software Developer · App Designer · Entrepreneur
+            </div>
+          </div>
+          <div>
+            <div class="footer-links-title">Navigate</div>
+            <nav class="footer-nav">
+              <a href="index.html">Home</a>
+              <a href="about.html">About</a>
+              <a href="projects.html">Projects</a>
+              <a href="planner.html">Planner</a>
+              <a href="contact.html">Contact</a>
+            </nav>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2025 Ajah Onyekachi Emmanuel. All rights reserved.</span>
+          <div class="footer-socials">
+            <a class="footer-social" href="#" aria-label="GitHub">GH</a>
+            <a class="footer-social" href="#" aria-label="LinkedIn">LI</a>
+            <a class="footer-social" href="#" aria-label="Twitter">TW</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Academic Planner — Manage your university tasks, assignments and deadlines."
+    />
+    <title>Academic Planner — Ajah Emmanuel</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="container nav-inner">
+        <a class="nav-logo" href="index.html">Ajah<span>.</span>dev</a>
+        <ul class="nav-links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="planner.html" class="active">Planner</a></li>
+          <li>
+            <a href="contact.html" class="btn btn-primary nav-cta">Contact →</a>
+          </li>
+        </ul>
+        <button
+          class="hamburger"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <header class="page-hero">
+      <div class="container">
+        <span class="section-label">productivity</span>
+        <h1 class="page-hero-title">
+          Academic <span class="accent">Planner</span>
+        </h1>
+        <p class="page-hero-sub">
+          Stay on top of assignments, projects, and deadlines. Add tasks, mark
+          them done, and keep your semester organized.
+        </p>
+      </div>
+    </header>
+
+    <!-- PLANNER -->
+    <section class="section" aria-label="Task planner">
+      <div class="container">
+        <div class="planner-layout">
+          <!-- ADD TASK PANEL -->
+          <aside aria-label="Add new task">
+            <div class="planner-input-card">
+              <span class="section-label" style="margin-bottom: 16px"
+                >new task</span
+              >
+              <h2
+                style="
+                  font-family: var(--ff-display);
+                  font-size: 1.2rem;
+                  font-weight: 700;
+                  margin-bottom: 20px;
+                "
+              >
+                Add a Task
+              </h2>
+
+              <form id="task-form" novalidate aria-label="Task creation form">
+                <div class="form-group">
+                  <label class="form-label" for="task-text"
+                    >Task Description *</label
+                  >
+                  <input
+                    type="text"
+                    id="task-text"
+                    class="form-input"
+                    placeholder="e.g., Submit COS 106 project report"
+                    required
+                    maxlength="120"
+                    aria-required="true"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="task-category">Category</label>
+                  <select id="task-category" class="form-select">
+                    <option value="Assignment">📝 Assignment</option>
+                    <option value="Exam Prep">📚 Exam Prep</option>
+                    <option value="Project">💻 Project</option>
+                    <option value="Reading">📖 Reading</option>
+                    <option value="Personal">🧘 Personal</option>
+                    <option value="Research">🔬 Research</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="task-priority">Priority</label>
+                  <select id="task-priority" class="form-select">
+                    <option value="high">🔴 High Priority</option>
+                    <option value="medium" selected>🟡 Medium Priority</option>
+                    <option value="low">🟢 Low Priority</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="task-due"
+                    >Due Date (optional)</label
+                  >
+                  <input type="date" id="task-due" class="form-input" />
+                </div>
+
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                  style="width: 100%; justify-content: center"
+                >
+                  + Add Task
+                </button>
+              </form>
+
+              <!-- Summary -->
+              <div
+                style="
+                  margin-top: 24px;
+                  padding: 16px;
+                  background: var(--navy);
+                  border: 1px solid var(--border);
+                  border-radius: 10px;
+                "
+              >
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 0.82rem;
+                    margin-bottom: 8px;
+                  "
+                >
+                  <span style="color: var(--slate)">Total tasks</span>
+                  <span
+                    id="tasks-total"
+                    style="font-family: var(--ff-mono); color: var(--white)"
+                    >0</span
+                  >
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 0.82rem;
+                    margin-bottom: 8px;
+                  "
+                >
+                  <span style="color: var(--slate)">Completed</span>
+                  <span
+                    id="tasks-done"
+                    style="font-family: var(--ff-mono); color: #4ade80"
+                    >0</span
+                  >
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 0.82rem;
+                  "
+                >
+                  <span style="color: var(--slate)">Remaining</span>
+                  <span
+                    id="tasks-remaining"
+                    style="font-family: var(--ff-mono); color: var(--amber)"
+                    >0</span
+                  >
+                </div>
+                <!-- Progress bar -->
+                <div
+                  style="
+                    margin-top: 12px;
+                    height: 4px;
+                    border-radius: 2px;
+                    background: var(--border);
+                    overflow: hidden;
+                  "
+                >
+                  <div
+                    id="progress-bar"
+                    style="
+                      height: 100%;
+                      width: 0%;
+                      background: linear-gradient(
+                        90deg,
+                        var(--indigo),
+                        #a855f7
+                      );
+                      transition: width 0.4s ease;
+                      border-radius: 2px;
+                    "
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </aside>
+
+          <!-- TASKS PANEL -->
+          <main class="tasks-panel" aria-label="Task list">
+            <div class="tasks-header">
+              <div>
+                <h2
+                  style="
+                    font-family: var(--ff-display);
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                    margin-bottom: 4px;
+                  "
+                >
+                  My Tasks
+                </h2>
+                <p class="tasks-count" id="tasks-count">0/0 completed</p>
+              </div>
+              <button
+                id="clear-completed"
+                class="btn btn-outline"
+                style="padding: 8px 16px; font-size: 0.82rem"
+                title="Remove all completed tasks"
+              >
+                Clear Done
+              </button>
+            </div>
+
+            <!-- Filter buttons -->
+            <div class="tasks-filters" role="group" aria-label="Filter tasks">
+              <button class="filter-btn active" data-filter="all">All</button>
+              <button class="filter-btn" data-filter="active">Active</button>
+              <button class="filter-btn" data-filter="completed">
+                Completed
+              </button>
+              <button class="filter-btn" data-filter="Assignment">
+                Assignments
+              </button>
+              <button class="filter-btn" data-filter="Project">Projects</button>
+              <button class="filter-btn" data-filter="Exam Prep">
+                Exam Prep
+              </button>
+            </div>
+
+            <!-- Task list -->
+            <div
+              id="task-list"
+              class="task-list"
+              role="list"
+              aria-live="polite"
+              aria-label="Tasks"
+            ></div>
+
+            <!-- Empty state -->
+            <div
+              id="tasks-empty"
+              class="tasks-empty"
+              style="display: none"
+              aria-live="polite"
+            >
+              <div class="empty-icon">📋</div>
+              <p
+                style="
+                  font-weight: 600;
+                  margin-bottom: 4px;
+                  color: var(--slate-lt);
+                "
+              >
+                No tasks here
+              </p>
+              <p>Add your first task using the panel on the left.</p>
+            </div>
+          </main>
+        </div>
+        <!-- /planner-layout -->
+      </div>
+    </section>
+
+    <!-- HOW TO USE -->
+    <section
+      class="section fade-up"
+      style="background: var(--navy-mid); border-top: 1px solid var(--border)"
+      aria-label="Instructions"
+    >
+      <div class="container">
+        <span class="section-label">guide</span>
+        <h2 class="section-title" style="margin-bottom: 32px">
+          How to use the <span class="accent">Planner</span>
+        </h2>
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+          "
+        >
+          <div class="card" style="text-align: center">
+            <div style="font-size: 2rem; margin-bottom: 10px">✍️</div>
+            <h3
+              style="
+                font-family: var(--ff-display);
+                font-size: 1rem;
+                margin-bottom: 6px;
+              "
+            >
+              1. Add a Task
+            </h3>
+            <p style="font-size: 0.85rem; color: var(--slate-lt)">
+              Type your task description, pick a category and priority, then hit
+              Add.
+            </p>
+          </div>
+          <div class="card" style="text-align: center">
+            <div style="font-size: 2rem; margin-bottom: 10px">☑️</div>
+            <h3
+              style="
+                font-family: var(--ff-display);
+                font-size: 1rem;
+                margin-bottom: 6px;
+              "
+            >
+              2. Mark Complete
+            </h3>
+            <p style="font-size: 0.85rem; color: var(--slate-lt)">
+              Click the checkbox on any task to mark it as done. Click again to
+              undo.
+            </p>
+          </div>
+          <div class="card" style="text-align: center">
+            <div style="font-size: 2rem; margin-bottom: 10px">🔍</div>
+            <h3
+              style="
+                font-family: var(--ff-display);
+                font-size: 1rem;
+                margin-bottom: 6px;
+              "
+            >
+              3. Filter Tasks
+            </h3>
+            <p style="font-size: 0.85rem; color: var(--slate-lt)">
+              Use the filter buttons to view tasks by status or category.
+            </p>
+          </div>
+          <div class="card" style="text-align: center">
+            <div style="font-size: 2rem; margin-bottom: 10px">🗑️</div>
+            <h3
+              style="
+                font-family: var(--ff-display);
+                font-size: 1rem;
+                margin-bottom: 6px;
+              "
+            >
+              4. Delete Tasks
+            </h3>
+            <p style="font-size: 0.85rem; color: var(--slate-lt)">
+              Hit the ✕ button to permanently remove a task from the list.
+            </p>
+          </div>
+        </div>
+        <p
+          style="
+            margin-top: 20px;
+            color: var(--slate);
+            font-size: 0.85rem;
+            font-family: var(--ff-mono);
+          "
+        >
+          💾 Tasks are saved automatically in your browser's localStorage — they
+          persist between visits.
+        </p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <div class="footer-inner">
+          <div>
+            <div class="footer-logo">ajah<span>.</span>dev</div>
+            <div class="footer-tagline">
+              Software Developer · App Designer · Entrepreneur
+            </div>
+          </div>
+          <div>
+            <div class="footer-links-title">Navigate</div>
+            <nav class="footer-nav">
+              <a href="index.html">Home</a>
+              <a href="about.html">About</a>
+              <a href="projects.html">Projects</a>
+              <a href="planner.html">Planner</a>
+              <a href="contact.html">Contact</a>
+            </nav>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2025 Ajah Onyekachi Emmanuel. All rights reserved.</span>
+          <div class="footer-socials">
+            <a class="footer-social" href="#" aria-label="GitHub">GH</a>
+            <a class="footer-social" href="#" aria-label="LinkedIn">LI</a>
+            <a class="footer-social" href="#" aria-label="Twitter">TW</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+      // Extra planner stats update (extends main.js)
+      (function () {
+        function updateStats() {
+          try {
+            const tasks = JSON.parse(
+              localStorage.getItem("portfolio_tasks") || "[]",
+            );
+            const total = tasks.length;
+            const done = tasks.filter((t) => t.completed).length;
+            const remaining = total - done;
+            const pct = total > 0 ? Math.round((done / total) * 100) : 0;
+
+            const totalEl = document.getElementById("tasks-total");
+            const doneEl = document.getElementById("tasks-done");
+            const remEl = document.getElementById("tasks-remaining");
+            const bar = document.getElementById("progress-bar");
+            const clearBtn = document.getElementById("clear-completed");
+
+            if (totalEl) totalEl.textContent = total;
+            if (doneEl) doneEl.textContent = done;
+            if (remEl) remEl.textContent = remaining;
+            if (bar) bar.style.width = pct + "%";
+
+            // Clear completed button
+            if (clearBtn) {
+              clearBtn.onclick = () => {
+                let tasks = JSON.parse(
+                  localStorage.getItem("portfolio_tasks") || "[]",
+                );
+                tasks = tasks.filter((t) => !t.completed);
+                localStorage.setItem("portfolio_tasks", JSON.stringify(tasks));
+                location.reload();
+              };
+            }
+          } catch (e) {}
+        }
+
+        // Run on load and observe DOM changes
+        updateStats();
+        const observer = new MutationObserver(updateStats);
+        const list = document.getElementById("task-list");
+        if (list) observer.observe(list, { childList: true, subtree: true });
+      })();
+    </script>
+  </body>
+</html>
