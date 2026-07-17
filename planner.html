@@ -8,6 +8,7 @@
       content="Academic Planner — Manage your university tasks, assignments and deadlines."
     />
     <title>Academic Planner — Ajah Emmanuel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -21,7 +22,7 @@
           <li><a href="projects.html">Projects</a></li>
           <li><a href="planner.html" class="active">Planner</a></li>
           <li>
-            <a href="contact.html" class="btn btn-primary nav-cta">Contact →</a>
+            <a href="contact.html" class="btn btn-primary nav-cta">Contact <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
           </li>
         </ul>
         <button
@@ -88,21 +89,21 @@
                 <div class="form-group">
                   <label class="form-label" for="task-category">Category</label>
                   <select id="task-category" class="form-select">
-                    <option value="Assignment">📝 Assignment</option>
-                    <option value="Exam Prep">📚 Exam Prep</option>
-                    <option value="Project">💻 Project</option>
-                    <option value="Reading">📖 Reading</option>
-                    <option value="Personal">🧘 Personal</option>
-                    <option value="Research">🔬 Research</option>
+                    <option value="Assignment">Assignment</option>
+                    <option value="Exam Prep">Exam Prep</option>
+                    <option value="Project">Project</option>
+                    <option value="Reading">Reading</option>
+                    <option value="Personal">Personal</option>
+                    <option value="Research">Research</option>
                   </select>
                 </div>
 
                 <div class="form-group">
                   <label class="form-label" for="task-priority">Priority</label>
                   <select id="task-priority" class="form-select">
-                    <option value="high">🔴 High Priority</option>
-                    <option value="medium" selected>🟡 Medium Priority</option>
-                    <option value="low">🟢 Low Priority</option>
+                    <option value="high">High Priority</option>
+                    <option value="medium" selected>Medium Priority</option>
+                    <option value="low">Low Priority</option>
                   </select>
                 </div>
 
@@ -263,7 +264,7 @@
               style="display: none"
               aria-live="polite"
             >
-              <div class="empty-icon">📋</div>
+              <div class="empty-icon"><i class="fa-solid fa-clipboard-list" aria-hidden="true"></i></div>
               <p
                 style="
                   font-weight: 600;
@@ -300,7 +301,7 @@
           "
         >
           <div class="card" style="text-align: center">
-            <div style="font-size: 2rem; margin-bottom: 10px">✍️</div>
+            <div class="feature-icon"><i class="fa-solid fa-pen" aria-hidden="true"></i></div>
             <h3
               style="
                 font-family: var(--ff-display);
@@ -316,7 +317,7 @@
             </p>
           </div>
           <div class="card" style="text-align: center">
-            <div style="font-size: 2rem; margin-bottom: 10px">☑️</div>
+            <div class="feature-icon"><i class="fa-solid fa-square-check" aria-hidden="true"></i></div>
             <h3
               style="
                 font-family: var(--ff-display);
@@ -332,7 +333,7 @@
             </p>
           </div>
           <div class="card" style="text-align: center">
-            <div style="font-size: 2rem; margin-bottom: 10px">🔍</div>
+            <div class="feature-icon"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></div>
             <h3
               style="
                 font-family: var(--ff-display);
@@ -347,7 +348,7 @@
             </p>
           </div>
           <div class="card" style="text-align: center">
-            <div style="font-size: 2rem; margin-bottom: 10px">🗑️</div>
+            <div class="feature-icon"><i class="fa-solid fa-trash-can" aria-hidden="true"></i></div>
             <h3
               style="
                 font-family: var(--ff-display);
@@ -358,7 +359,7 @@
               4. Delete Tasks
             </h3>
             <p style="font-size: 0.85rem; color: var(--slate-lt)">
-              Hit the ✕ button to permanently remove a task from the list.
+              Use the <i class="fa-solid fa-xmark" aria-hidden="true"></i> button to permanently remove a task from the list.
             </p>
           </div>
         </div>
@@ -370,7 +371,7 @@
             font-family: var(--ff-mono);
           "
         >
-          💾 Tasks are saved automatically in your browser's localStorage — they
+          <i class="fa-solid fa-floppy-disk" aria-hidden="true"></i> Tasks are saved automatically in your browser's localStorage — they
           persist between visits.
         </p>
       </div>
@@ -398,17 +399,15 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <span>© 2025 Ajah Onyekachi Emmanuel. All rights reserved.</span>
+          <span>© 2026 Ajah Onyekachi Emmanuel. All rights reserved.</span>
           <div class="footer-socials">
-            <a class="footer-social" href="#" aria-label="GitHub">GH</a>
-            <a class="footer-social" href="#" aria-label="LinkedIn">LI</a>
-            <a class="footer-social" href="#" aria-label="Twitter">TW</a>
+            <a class="footer-social footer-email" href="mailto:emmanuel@appnaija.dev" aria-label="Email Ajah Emmanuel">Email</a>
           </div>
         </div>
       </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="main.js"></script>
     <script>
       // Extra planner stats update (extends main.js)
       (function () {
