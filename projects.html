@@ -8,6 +8,7 @@
       content="Projects by Ajah Onyekachi Emmanuel — mobile apps, web platforms, and UI/UX designs."
     />
     <title>Projects — Ajah Emmanuel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -22,7 +23,7 @@
           <li><a href="projects.html" class="active">Projects</a></li>
           <li><a href="planner.html">Planner</a></li>
           <li>
-            <a href="contact.html" class="btn btn-primary nav-cta">Contact →</a>
+            <a href="contact.html" class="btn btn-primary nav-cta">Contact <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
           </li>
         </ul>
         <button
@@ -61,13 +62,13 @@
             All Projects
           </button>
           <button class="filter-btn proj-filter-btn" data-cat="mobile">
-            📱 Mobile
+            <i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i> Mobile
           </button>
           <button class="filter-btn proj-filter-btn" data-cat="web">
-            🌐 Web
+            <i class="fa-solid fa-globe" aria-hidden="true"></i> Web
           </button>
           <button class="filter-btn proj-filter-btn" data-cat="design">
-            🎨 Design
+            <i class="fa-solid fa-pen-ruler" aria-hidden="true"></i> Design
           </button>
         </div>
 
@@ -79,11 +80,12 @@
             data-cat="web"
             aria-label="AppNaija Studios Platform"
           >
-            <div
-              class="project-thumb"
-              style="background: linear-gradient(135deg, #1a0533, #2d1060)"
-            >
-              <span style="position: relative; z-index: 1">🏢</span>
+            <div class="project-thumb">
+              <img
+                src="project-appnaija.png"
+                alt="Screenshot of the AppNaija Studios website interface"
+                loading="lazy"
+              />
             </div>
             <div class="project-body">
               <div class="project-meta">
@@ -99,12 +101,8 @@
                 validated contact form.
               </p>
               <div class="project-links">
-                <a href="#" class="project-link" target="_blank" rel="noopener">
-                  🔗 View Live
-                </a>
-                <a href="#" class="project-link" target="_blank" rel="noopener">
-                  &lt;/&gt; Source
-                </a>
+                <span class="project-status">Private client work</span>
+                <a href="contact.html" class="project-link">Discuss a similar project <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
               </div>
             </div>
           </article>
@@ -115,13 +113,12 @@
             data-cat="mobile"
             aria-label="Tutgo Learn Mobile App"
           >
-            <div
-              class="project-thumb"
-              style="
-                background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-              "
-            >
-              <span style="position: relative; z-index: 1">🎓</span>
+            <div class="project-thumb">
+              <img
+                src="project-tutgo.png"
+                alt="Screenshot of the Tutgo Learn course dashboard"
+                loading="lazy"
+              />
             </div>
             <div class="project-body">
               <div class="project-meta">
@@ -137,12 +134,8 @@
                 offline support in mind for users across Nigeria.
               </p>
               <div class="project-links">
-                <a href="#" class="project-link" target="_blank" rel="noopener">
-                  🔗 View Demo
-                </a>
-                <a href="#" class="project-link" target="_blank" rel="noopener">
-                  &lt;/&gt; Source
-                </a>
+                <span class="project-status">In development</span>
+                <a href="contact.html" class="project-link">Request a walkthrough <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
               </div>
             </div>
           </article>
@@ -153,13 +146,12 @@
             data-cat="design"
             aria-label="NaijaMarket UI Redesign"
           >
-            <div
-              class="project-thumb"
-              style="
-                background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
-              "
-            >
-              <span style="position: relative; z-index: 1">🛒</span>
+            <div class="project-thumb">
+              <img
+                src="project-naijamarket.png"
+                alt="Screenshot of the NaijaMarket e-commerce redesign"
+                loading="lazy"
+              />
             </div>
             <div class="project-body">
               <div class="project-meta">
@@ -175,12 +167,8 @@
                 high-fidelity mockups, and a design system in Figma.
               </p>
               <div class="project-links">
-                <a href="#" class="project-link" target="_blank" rel="noopener">
-                  🎨 Figma File
-                </a>
-                <a href="#" class="project-link" target="_blank" rel="noopener">
-                  📄 Case Study
-                </a>
+                <span class="project-status">Concept case study</span>
+                <a href="contact.html" class="project-link">Ask about the process <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
               </div>
             </div>
           </article>
@@ -195,7 +183,7 @@
               class="project-thumb"
               style="background: linear-gradient(135deg, #0a0f1e, #1a2744)"
             >
-              <span style="position: relative; z-index: 1">✅</span>
+              <span style="position: relative; z-index: 1"><i class="fa-solid fa-list-check" aria-hidden="true"></i></span>
             </div>
             <div class="project-body">
               <div class="project-meta">
@@ -211,10 +199,8 @@
                 Academic Planner. No frameworks — just clean, fast code.
               </p>
               <div class="project-links">
-                <a href="planner.html" class="project-link"> 🚀 Try It Live </a>
-                <a href="#" class="project-link" target="_blank" rel="noopener">
-                  &lt;/&gt; Source
-                </a>
+                <a href="planner.html" class="project-link"><i class="fa-solid fa-rocket" aria-hidden="true"></i> Try It Live</a>
+                <a href="contact.html" class="project-link">Request the source <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
               </div>
             </div>
           </article>
@@ -229,7 +215,7 @@
               class="project-thumb"
               style="background: linear-gradient(135deg, #1f4037, #99f2c8)"
             >
-              <span style="position: relative; z-index: 1">🌍</span>
+              <span style="position: relative; z-index: 1"><i class="fa-solid fa-earth-africa" aria-hidden="true"></i></span>
             </div>
             <div class="project-body">
               <div class="project-meta">
@@ -245,12 +231,8 @@
                 authentication. Currently in active beta testing.
               </p>
               <div class="project-links">
-                <a href="#" class="project-link" target="_blank" rel="noopener">
-                  🔗 Beta Access
-                </a>
-                <a href="#" class="project-link" target="_blank" rel="noopener">
-                  &lt;/&gt; Source
-                </a>
+                <span class="project-status">Beta</span>
+                <a href="contact.html" class="project-link">Join the waitlist <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
               </div>
             </div>
           </article>
@@ -265,7 +247,7 @@
               class="project-thumb"
               style="background: linear-gradient(135deg, #0a0f1e, #5b4dff33)"
             >
-              <span style="position: relative; z-index: 1">💼</span>
+              <span style="position: relative; z-index: 1"><i class="fa-solid fa-briefcase" aria-hidden="true"></i></span>
             </div>
             <div class="project-body">
               <div class="project-meta">
@@ -282,10 +264,8 @@
                 responsiveness.
               </p>
               <div class="project-links">
-                <a href="index.html" class="project-link"> 🔗 You're Here </a>
-                <a href="#" class="project-link" target="_blank" rel="noopener">
-                  &lt;/&gt; GitHub
-                </a>
+                <a href="index.html" class="project-link"><i class="fa-solid fa-link" aria-hidden="true"></i> You're Here</a>
+                <a href="contact.html" class="project-link">Work with me <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
               </div>
             </div>
           </article>
@@ -372,55 +352,20 @@
       </div>
     </section>
 
-    <!-- VIDEO DEMO (Multimedia requirement) -->
-    <section class="section fade-up" aria-label="Project demo video">
+    <!-- PROJECT CTA -->
+    <section class="section fade-up" aria-label="Start a project">
       <div class="container">
-        <span class="section-label">demo</span>
+        <span class="section-label">next project</span>
         <h2 class="section-title" style="margin-bottom: 24px">
-          See it in <span class="accent">action</span>
+          Have a challenge worth <span class="accent">solving?</span>
         </h2>
-        <div class="media-card" style="max-width: 720px">
-          <p
-            style="
-              color: var(--slate-lt);
-              font-size: 0.9rem;
-              margin-bottom: 16px;
-            "
-          >
-            🎬 Project walkthrough — AppNaija Studios Platform demo:
+        <div class="project-cta-card">
+          <p>
+            I help turn early ideas and existing product problems into clear,
+            useful mobile and web experiences. Tell me what you are building,
+            where you are stuck, and what success looks like.
           </p>
-          <video
-            controls
-            preload="metadata"
-            poster=""
-            style="width: 100%; border-radius: 8px; background: #000"
-          >
-            <source src="media/demo.mp4" type="video/mp4" />
-            <p
-              style="
-                color: var(--slate);
-                font-size: 0.85rem;
-                padding: 20px;
-                text-align: center;
-              "
-            >
-              Video demo not available —
-              <a href="media/demo.mp4" style="color: var(--indigo-lt)"
-                >download here</a
-              >.
-            </p>
-          </video>
-          <p
-            style="
-              color: var(--slate);
-              font-size: 0.78rem;
-              margin-top: 12px;
-              font-style: italic;
-            "
-          >
-            Note: Video is a placeholder — replace with your actual project
-            demo.
-          </p>
+          <a href="contact.html" class="btn btn-primary">Start a conversation <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
         </div>
       </div>
     </section>
@@ -447,16 +392,14 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <span>© 2025 Ajah Onyekachi Emmanuel. All rights reserved.</span>
+          <span>© 2026 Ajah Onyekachi Emmanuel. All rights reserved.</span>
           <div class="footer-socials">
-            <a class="footer-social" href="#" aria-label="GitHub">GH</a>
-            <a class="footer-social" href="#" aria-label="LinkedIn">LI</a>
-            <a class="footer-social" href="#" aria-label="Twitter">TW</a>
+            <a class="footer-social footer-email" href="mailto:emmanuel@appnaija.dev" aria-label="Email Ajah Emmanuel">Email</a>
           </div>
         </div>
       </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
