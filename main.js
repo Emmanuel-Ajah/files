@@ -42,6 +42,7 @@ function escapeHTML(str) {
     hamburger.addEventListener('click', () => {
       hamburger.classList.toggle('open');
       navLinks.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', String(navLinks.classList.contains('open')));
     });
 
     // Close on link click
@@ -49,7 +50,17 @@ function escapeHTML(str) {
       a.addEventListener('click', () => {
         hamburger.classList.remove('open');
         navLinks.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
       });
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && navLinks.classList.contains('open')) {
+        hamburger.classList.remove('open');
+        navLinks.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.focus();
+      }
     });
   }
 
@@ -67,6 +78,11 @@ function escapeHTML(str) {
 (function initFadeObserver() {
   const elements = $$('.fade-up');
   if (!elements.length) return;
+
+  if (!('IntersectionObserver' in window)) {
+    elements.forEach(el => el.classList.add('visible'));
+    return;
+  }
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -207,17 +223,17 @@ function escapeHTML(str) {
 
     div.innerHTML = `
       <button class="task-checkbox ${checked}" title="Toggle complete" aria-label="Mark complete">
-        ${task.completed ? '✓' : ''}
+        ${task.completed ? '<i class="fa-solid fa-check" aria-hidden="true"></i>' : ''}
       </button>
       <div class="task-body">
         <div class="task-text">${escapeHTML(task.text)}</div>
         <div class="task-meta">
           <span class="task-priority ${priorityClass}">${task.priority}</span>
           <span class="task-category-label">${escapeHTML(task.category)}</span>
-          ${task.due ? `<span class="task-due">📅 ${formatDate(task.due)}</span>` : ''}
+          ${task.due ? `<span class="task-due"><i class="fa-regular fa-calendar" aria-hidden="true"></i> ${formatDate(task.due)}</span>` : ''}
         </div>
       </div>
-      <button class="task-delete" title="Delete task" aria-label="Delete task">✕</button>
+      <button class="task-delete" title="Delete task" aria-label="Delete task"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
     `;
 
     // Toggle complete
@@ -303,7 +319,7 @@ function escapeHTML(str) {
   const validators = {
     name(v)    { return v.trim().length >= 2; },
     email(v)   { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()); },
-    phone(v)   { return /^\d{7,15}$/.test(v.trim().replace(/[\s\-\+\(\)]/g, '')); },
+    phone(v)   { return /^\d{7,15}$/.test(v.trim()); },
     message(v) { return v.trim().length >= 10; },
   };
 
@@ -336,8 +352,19 @@ function escapeHTML(str) {
     e.preventDefault();
     const results = Object.keys(fields).map(name => validateField(name));
     if (results.every(Boolean)) {
+      const subject = $('#cf-subject').value;
+      const body = [
+        `Name: ${fields.name.el.value.trim()}`,
+        `Email: ${fields.email.el.value.trim()}`,
+        `Phone: ${fields.phone.el.value.trim()}`,
+        '',
+        fields.message.el.value.trim()
+      ].join('\n');
+
+      const mailto = `mailto:emmanuel@appnaija.dev?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       form.style.display = 'none';
       successEl.classList.add('show');
+      window.location.href = mailto;
     } else {
       // Focus first error
       const firstError = Object.keys(fields).find(name => !validators[name](fields[name].el.value));
