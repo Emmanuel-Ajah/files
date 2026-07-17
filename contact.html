@@ -8,6 +8,7 @@
       content="Contact Ajah Onyekachi Emmanuel — for project inquiries, collaboration, or mentorship."
     />
     <title>Contact — Ajah Emmanuel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -23,7 +24,7 @@
           <li><a href="planner.html">Planner</a></li>
           <li>
             <a href="contact.html" class="btn btn-primary nav-cta active"
-              >Contact →</a
+              >Contact <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a
             >
           </li>
         </ul>
@@ -66,27 +67,19 @@
               </p>
 
               <div class="contact-detail">
-                <div class="contact-icon" aria-hidden="true">📧</div>
+                <div class="contact-icon" aria-hidden="true"><i class="fa-solid fa-envelope"></i></div>
                 <div>
                   <div class="contact-detail-label">Email</div>
-                  <div class="contact-detail-value">emmanuel@appnaija.dev</div>
+                  <a class="contact-detail-value contact-link" href="mailto:emmanuel@appnaija.dev">emmanuel@appnaija.dev</a>
                 </div>
               </div>
 
               <div class="contact-detail">
-                <div class="contact-icon" aria-hidden="true">📞</div>
-                <div>
-                  <div class="contact-detail-label">Phone</div>
-                  <div class="contact-detail-value">+234 800 000 0000</div>
-                </div>
-              </div>
-
-              <div class="contact-detail">
-                <div class="contact-icon" aria-hidden="true">📍</div>
+                <div class="contact-icon" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></div>
                 <div>
                   <div class="contact-detail-label">Location</div>
                   <div class="contact-detail-value">
-                    Nigeria 🇳🇬 · Remote Worldwide
+                    Nigeria · Remote Worldwide
                   </div>
                 </div>
               </div>
@@ -99,44 +92,6 @@
                 </div>
               </div>
 
-              <!-- Social links -->
-              <div style="margin-top: 24px">
-                <div
-                  style="
-                    font-size: 0.78rem;
-                    color: var(--slate);
-                    margin-bottom: 12px;
-                    font-family: var(--ff-mono);
-                    letter-spacing: 0.1em;
-                    text-transform: uppercase;
-                  "
-                >
-                  Find me on
-                </div>
-                <div style="display: flex; gap: 10px; flex-wrap: wrap">
-                  <a
-                    href="#"
-                    class="btn btn-outline"
-                    style="padding: 8px 16px; font-size: 0.82rem"
-                    aria-label="GitHub profile"
-                    >GH GitHub</a
-                  >
-                  <a
-                    href="#"
-                    class="btn btn-outline"
-                    style="padding: 8px 16px; font-size: 0.82rem"
-                    aria-label="LinkedIn profile"
-                    >LI LinkedIn</a
-                  >
-                  <a
-                    href="#"
-                    class="btn btn-outline"
-                    style="padding: 8px 16px; font-size: 0.82rem"
-                    aria-label="Twitter profile"
-                    >TW Twitter</a
-                  >
-                </div>
-              </div>
             </div>
           </aside>
 
@@ -145,7 +100,7 @@
             <div class="contact-form-card">
               <div class="contact-form-title">Send a Message</div>
               <p class="contact-form-sub">
-                All fields are required. I read every message personally.
+                Complete the form and your email app will open with the message ready to send.
               </p>
 
               <!-- The contact form -->
@@ -200,9 +155,11 @@
                     id="cf-phone"
                     class="form-input"
                     placeholder="e.g., 08012345678"
-                    required
-                    autocomplete="tel"
-                    aria-required="true"
+                      required
+                      autocomplete="tel"
+                      inputmode="numeric"
+                      pattern="[0-9]{7,15}"
+                      aria-required="true"
                     aria-describedby="err-phone"
                   />
                   <span id="err-phone" class="field-error" role="alert"></span>
@@ -212,13 +169,13 @@
                 <div class="form-group">
                   <label class="form-label" for="cf-subject">Subject</label>
                   <select id="cf-subject" class="form-select">
-                    <option value="Project Inquiry">💻 Project Inquiry</option>
-                    <option value="Collaboration">🤝 Collaboration</option>
+                    <option value="Project Inquiry">Project Inquiry</option>
+                    <option value="Collaboration">Collaboration</option>
                     <option value="Tutgo / Education">
-                      🎓 Tutgo / Education
+                      Tutgo / Education
                     </option>
-                    <option value="Mentorship">🧠 Mentorship</option>
-                    <option value="General">💬 General Message</option>
+                    <option value="Mentorship">Mentorship</option>
+                    <option value="General">General Message</option>
                   </select>
                 </div>
 
@@ -246,7 +203,7 @@
                   class="btn btn-primary"
                   style="width: 100%; justify-content: center; padding: 14px"
                 >
-                  Send Message →
+                  Prepare Email <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                 </button>
               </form>
 
@@ -257,11 +214,11 @@
                 role="alert"
                 aria-live="polite"
               >
-                <div class="success-icon">🎉</div>
-                <div class="success-title">Message Sent!</div>
+                <div class="success-icon"><i class="fa-solid fa-envelope-circle-check" aria-hidden="true"></i></div>
+                <div class="success-title">Email draft prepared</div>
                 <p class="success-sub" style="margin-bottom: 20px">
-                  Thanks for reaching out! I'll get back to you within 24 hours.
-                  Check your inbox for a confirmation.
+                  Your email app should now be open. Review the message there,
+                  then press send when you are ready.
                 </p>
                 <button id="form-reset" class="btn btn-outline">
                   Send Another Message
@@ -407,16 +364,14 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <span>© 2025 Ajah Onyekachi Emmanuel. All rights reserved.</span>
+          <span>© 2026 Ajah Onyekachi Emmanuel. All rights reserved.</span>
           <div class="footer-socials">
-            <a class="footer-social" href="#" aria-label="GitHub">GH</a>
-            <a class="footer-social" href="#" aria-label="LinkedIn">LI</a>
-            <a class="footer-social" href="#" aria-label="Twitter">TW</a>
+            <a class="footer-social footer-email" href="mailto:emmanuel@appnaija.dev" aria-label="Email Ajah Emmanuel">Email</a>
           </div>
         </div>
       </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
